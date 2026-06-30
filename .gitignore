@@ -1,0 +1,6 @@
+server.log
+tunnel.log
+*.zip
+._*
+**/._*
+.DS_Store
