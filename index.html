@@ -34,18 +34,18 @@
 <script>
 const N=15, E=0, B=1, W=2;
 const SKILLS=[
-  {id:"sand",name:"飞沙走石",cost:3,cd:3,target:"enemy",kind:"attack",text:"选一颗敌子，把它扔进什刹海：直接移除。"},
-  {id:"still",name:"静如止水",cost:2,cd:4,target:"none",kind:"control",text:"凝结时间冻结空气：对手被冻结，你可以连续下两子。"},
-  {id:"mountain",name:"力拔山兮",cost:5,cd:5,target:"empty",kind:"attack",text:"棋盘：危。若此处能形成四连，直接判你赢。"},
+  {id:"sand",name:"飞沙走石",cost:4,cd:4,target:"enemy",kind:"attack",text:"选一颗敌子，把它扔进什刹海：直接移除。"},
+  {id:"still",name:"静如止水",cost:5,cd:6,target:"none",kind:"control",text:"凝结时间冻结空气：对手被冻结，你可以连续下两子。"},
+  {id:"mountain",name:"力拔山兮",cost:6,cd:6,target:"empty",kind:"attack",text:"棋盘：危。若此处能形成四连，直接判你赢。"},
   {id:"reverse",name:"两极反转",cost:3,cd:4,target:"none",kind:"trick",text:"把整个棋盘旋转180度。不是翻盘，胜似翻盘。"},
   {id:"swap",name:"偷梁换柱",cost:3,cd:3,target:"any2",kind:"trick",text:"先后选择两颗棋子，交换位置。伦理委员会已下线。"},
-  {id:"deer",name:"指鹿为马",cost:4,cd:4,target:"enemy",kind:"trick",text:"选一颗敌子，强行说它是你的。它还真信了。"},
+  {id:"deer",name:"指鹿为马",cost:5,cd:5,target:"enemy",kind:"trick",text:"选一颗敌子，强行说它是你的。它还真信了。"},
   {id:"create",name:"锦上添花",cost:4,cd:4,target:"empty",kind:"trap",text:"选一个空位落下一颗气势棋，特效很大，听起来非常有用。"},
-  {id:"revive",name:"借尸还魂",cost:3,cd:3,target:"empty",kind:"trick",text:"把一颗被移除的己方棋子复活到空位。没有尸体就很尴尬。"},
+  {id:"revive",name:"借尸还魂",cost:4,cd:4,target:"empty",kind:"trick",text:"把一颗被移除的己方棋子复活到空位。没有尸体就很尴尬。"},
   {id:"rescue",name:"围魏救赵",cost:3,cd:4,target:"empty",kind:"control",text:"指定一个空位，对手下回合必须堵那里。强买强卖型战术。"},
-  {id:"prison",name:"画地为牢",cost:3,cd:4,target:"empty",kind:"control",text:"选中心画出3x3禁区，对手下一回合不能落入。"},
-  {id:"guest",name:"反客为主",cost:5,cd:5,target:"none",kind:"trick",text:"下一回合你替对手落子。棋权转移，责任不转移。"},
-  {id:"justice",name:"天降正义",cost:2,cd:3,target:"none",kind:"attack",text:"随机砸掉棋盘上一颗棋子。公平，就是谁也不知道谁倒霉。"}
+  {id:"prison",name:"画地为牢",cost:4,cd:5,target:"empty",kind:"control",text:"选中心画出3x3禁区，对手下一回合不能落入。"},
+  {id:"guest",name:"反客为主",cost:6,cd:6,target:"none",kind:"trick",text:"下一回合你替对手落子。棋权转移，责任不转移。"},
+  {id:"justice",name:"天降正义",cost:3,cd:4,target:"none",kind:"attack",text:"随机砸掉棋盘上一颗棋子。公平，就是谁也不知道谁倒霉。"}
 ];
 const LINES=[[1,0],[0,1],[1,1],[1,-1]];
 const cvs=document.getElementById("board"),ctx=cvs.getContext("2d"),dev=document.getElementById("dev");
